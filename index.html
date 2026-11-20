@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">NST<span>.</span></div>
+    <nav>
+        <a href="#converter">Converter</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#systems">All Systems</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <span class="tag">COMPUTER SCIENCE PROJECT</span>
+        <h1>NUMBER SYSTEM <span>TOOLKIT</span></h1>
+        <p>Convert, calculate and explore number systems easily.</p>
+    </section>
+
+    <section class="card" id="converter">
+        <h2>Number Converter</h2>
+        <p class="description">Convert numbers between different systems.</p>
+
+        <label>Enter Number</label>
+        <input id="number" type="text" placeholder="Enter your number">
+
+        <div class="fields">
+            <div>
+                <label>From</label>
+                <select id="fromBase">
+                    <option value="2">Binary (2)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10" selected>Decimal (10)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+            </div>
+            <div>
+                <label>To</label>
+                <select id="toBase">
+                    <option value="2">Binary (2)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="10">Decimal (10)</option>
+                    <option value="16">Hexadecimal (16)</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="convertNumber()">Convert Number</button>
+        <div class="result" id="convertResult">Your result will appear here</div>
+    </section>
+
+    <section class="card" id="calculator">
+        <h2>Binary Calculator</h2>
+        <p class="description">Perform arithmetic operations using binary numbers.</p>
+
+        <label>First Binary Number</label>
+        <input id="firstNumber" type="text" placeholder="Example: 1010">
+
+        <label>Operation</label>
+        <select id="operation">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (×)</option>
+            <option value="/">Division (÷)</option>
+        </select>
+
+        <label>Second Binary Number</label>
+        <input id="secondNumber" type="text" placeholder="Example: 101">
+
+        <button onclick="calculateBinary()">Calculate</button>
+        <div class="result" id="calcResult">Your result will appear here</div>
+    </section>
+
+    <section class="card" id="systems">
+        <h2>Display All Number Systems</h2>
+        <p class="description">See the same number in all four systems.</p>
+
+        <label>Enter Decimal Number</label>
+        <input id="decimalNumber" type="text" placeholder="Example: 255">
+
+        <button onclick="displayAll()">Display All Systems</button>
+
+        <div class="system-results" id="allResults">
+            <div><span>Binary</span><strong>---</strong></div>
+            <div><span>Octal</span><strong>---</strong></div>
+            <div><span>Decimal</span><strong>---</strong></div>
+            <div><span>Hexadecimal</span><strong>---</strong></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>NUMBER SYSTEM TOOLKIT © 2026</p>
+    <p>Introduction to Computer Systems Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
